@@ -11,7 +11,8 @@ package contornos;
 public class Contornos {
 
     public static void main(String[] args) {
-        
+        Calculadora c= new Calculadora();
+        c.setVisible(true);
         
         
     }
