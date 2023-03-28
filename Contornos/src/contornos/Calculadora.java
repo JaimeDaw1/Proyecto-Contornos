@@ -199,6 +199,9 @@ public class Calculadora extends javax.swing.JFrame {
             if(rdbmultiplicar.isSelected()){
                 resultado=o1*o2;
             }
+              if(rdbDividir.isSelected()){
+                resultado=o1/o2;
+            }
              
             lblResul.setText(Double.toString(resultado));
         }catch(NumberFormatException nfe){
