@@ -62,6 +62,11 @@ public class Calculadora extends javax.swing.JFrame {
 
         buttonGroup1.add(rdbSumar);
         rdbSumar.setText("SUMAR");
+        rdbSumar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbSumarActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(rdbRestar);
         rdbRestar.setText("RESTAR");
@@ -204,6 +209,8 @@ public class Calculadora extends javax.swing.JFrame {
             if(rdbSumar.isSelected()){
                 resultado= o1+o2;
                 
+            
+                
             } 
             if(rdbRestar.isSelected()){
                 resultado=o1-o2;
@@ -245,13 +252,16 @@ public class Calculadora extends javax.swing.JFrame {
         tfOp1.setText(null);
         tfOp2.setText(null);
         
+       buttonGroup1.clearSelection();
+     
         
-        rdbSumar.setSelected(false);
-        rdbRestar.setSelected(false);
-        rdbmultiplicar.setSelected(false);
-        rdbDividir.setSelected(false);
+        
 
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void rdbSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbSumarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbSumarActionPerformed
 
     /**
      * @param args the command line arguments
