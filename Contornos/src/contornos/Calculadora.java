@@ -43,6 +43,7 @@ public class Calculadora extends javax.swing.JFrame {
         btnCalcular = new javax.swing.JButton();
         btnFin = new javax.swing.JButton();
         lblResul = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CALCULADORA");
@@ -98,6 +99,13 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("LIMPIAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -109,9 +117,12 @@ public class Calculadora extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(rdbSumar)
                             .addComponent(rdbRestar)
-                            .addComponent(btnCalcular)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(btnCalcular)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                .addComponent(jButton1))
                             .addComponent(rdbmultiplicar))
-                        .addGap(29, 120, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel3)
                             .addComponent(btnFin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -158,7 +169,8 @@ public class Calculadora extends javax.swing.JFrame {
                         .addGap(108, 108, 108)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular)
-                    .addComponent(btnFin))
+                    .addComponent(btnFin)
+                    .addComponent(jButton1))
                 .addGap(18, 18, 18))
         );
 
@@ -222,6 +234,19 @@ public class Calculadora extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rdbRestarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        tfOp1.setText(null);
+        tfOp2.setText(null);
+        
+        
+        rdbSumar.setSelected(false);
+        rdbRestar.setSelected(false);
+        rdbmultiplicar.setSelected(false);
+        rdbDividir.setSelected(false);
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -262,6 +287,7 @@ public class Calculadora extends javax.swing.JFrame {
     private javax.swing.JButton btnFin;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
